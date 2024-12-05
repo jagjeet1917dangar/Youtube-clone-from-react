@@ -31,10 +31,10 @@ function Sidebar() {
         { src: subscription }
     ];
     const data3 = [
-        { text:"Home"},
-        { text:"Explores"},
-        { text:"Shorts"},
-        { text:"Subscription"}
+        { text: "Home" },
+        { text: "Explores" },
+        { text: "Shorts" },
+        { text: "Subscription" }
     ];
     const data4 = [
         { src: library },
@@ -45,12 +45,12 @@ function Sidebar() {
         { src: downarrow }
     ];
     const data5 = [
-        { text:"Library"},
-        { text:"History"},
-        { text:"Your videos"},
-        { text:"Watch Later"},
-        { text:"Liked videos"},
-        { text:"Show more"}
+        { text: "Library" },
+        { text: "History" },
+        { text: "Your videos" },
+        { text: "Watch Later" },
+        { text: "Liked videos" },
+        { text: "Show more" }
     ];
     const data6 = [
         { src: Ellipse7 },
@@ -61,14 +61,14 @@ function Sidebar() {
         { src: Ellipse5 }
     ];
     const data7 = [
-        { text:"Nadir On the Go"},
-        { text:"Coke Studio Bangla"},
-        { text:"MKBHD"},
-        { text:"Figma"},
-        { text:"ATC Android ToTo C..."},
-        { text:"Alux.com"}
+        { text: "Nadir On the Go" },
+        { text: "Coke Studio Bangla" },
+        { text: "MKBHD" },
+        { text: "Figma" },
+        { text: "ATC Android ToTo C..." },
+        { text: "Alux.com" }
     ];
-    
+
 
     return (
         <>
@@ -82,27 +82,27 @@ function Sidebar() {
                 <div className="box1"></div>
                 <div className="sidebar2">
                     <div className="sidebar2from1">
-                    {data2.map((detail) => (
-                        <img className='firstside' src={detail.src} />
-                    )
-                    )}
+                        {data2.map((detail) => (
+                            <img className='firstside' src={detail.src} />
+                        )
+                        )}
                     </div>
                     <div className="sidebar2from2">
                         {data3.map((detail) => (
-                        <h5 className='secondside'>{detail.text}</h5>
-                    )
-                    )}
+                            <h5 className='secondside'>{detail.text}</h5>
+                        )
+                        )}
                     </div>
                 </div>
                 <div className="border1"></div>
                 <div className="sidebar3from1">
-                {data4.map((detail) => (
+                    {data4.map((detail) => (
                         <img className='firstside1' src={detail.src} />
                     )
                     )}
                 </div>
                 <div className="sidebar3from2">
-                {data5.map((detail) => (
+                    {data5.map((detail) => (
                         <h5 className='secondside2'>{detail.text}</h5>
                     )
                     )}
@@ -111,16 +111,16 @@ function Sidebar() {
                 <h5 className='heading'>SUBSCRIPTION</h5>
                 <div className="sidebar4">
                     <div className="sidebar4from1">
-                {data6.map((detail) => (
-                        <img className='firstside11' src={detail.src} />
-                    )
-                    )}
+                        {data6.map((detail) => (
+                            <img className='firstside11' src={detail.src} />
+                        )
+                        )}
                     </div>
                     <div className="sidebar4from2">
-                    {data7.map((detail) => (
-                        <h5 className='secondside2'>{detail.text}</h5>
-                    )
-                    )}
+                        {data7.map((detail) => (
+                            <h5 className='secondside2'>{detail.text}</h5>
+                        )
+                        )}
                     </div>
                 </div>
             </div>
