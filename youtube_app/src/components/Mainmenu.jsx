@@ -22,93 +22,105 @@ import p7 from '../assets/Ellipse14.png'
 
 function Mainmenu() {
     const data99 = [
-        { src:thumbail8,
-          src1:p1,
-          head1:["Bulbuli|Coke StudioBangla|","Season One|Ritu Raj X Nandita"],
-          head2:{h1:"Coke Studio Bangla",h2:"1.5Mviews - 2 days ago",src2:tick}
+        {
+            src: thumbail8,
+            src1: p1,
+            head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
+            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: tick }
         }
     ];
     const data98 = [
-        { src:thumbail9,
-          src1:p2,
-          head1:["Infinix Note 12:","AMOLED Helio G88 SoC!"],
-          head2:{h1:"ATC Android ToTo Company",h2:"42M views - 2 days ago",src2:tick}
+        {
+            src: thumbail9,
+            src1: p2,
+            head1: ["Infinix Note 12:", "AMOLED Helio G88 SoC!"],
+            head2: { h1: "ATC Android ToTo Company", h2: "42M views - 2 days ago", src2: tick }
         }
     ];
     const data97 = [
-        { src:thumbail10,
-          src1:p3,
-          head1:["My first UX Design case study -","This got me my first job."],
-          head2:{h1:"Saptarshi Prakash",h2:"48K views - 1 years ago",src2:tick}
+        {
+            src: thumbail10,
+            src1: p3,
+            head1: ["My first UX Design case study -", "This got me my first job."],
+            head2: { h1: "Saptarshi Prakash", h2: "48K views - 1 years ago", src2: tick }
         }
     ];
     const data96 = [
-        { src:thumbail11,
-          head1:["My Mix",""],
-          head2:{h1:"Lopamudra Mitra,Anupam Roy, and more"}
+        {
+            src: thumbail11,
+            head1: ["My Mix", ""],
+            head2: { h1: "Lopamudra Mitra,Anupam Roy, and more" }
         }
     ];
     const data95 = [
-        { src:thumbail4,
-          src1:p4,
-          head1:["UX Drsign-What is it?(From AJ","&Smart)"],
-          head2:{h1:"AJ&Smar",h2:"150KM views - 3 years ago",src2:tick}
+        {
+            src: thumbail4,
+            src1: p4,
+            head1: ["UX Drsign-What is it?(From AJ", "&Smart)"],
+            head2: { h1: "AJ&Smar", h2: "150KM views - 3 years ago", src2: tick }
         }
     ];
     const data94 = [
-        { src:thumbail5,
-          head1:["Mix - Mombati|Mohon Sharif","Dose|Mahib Ahsan ft Anika"],
-          head2:{h1:"Mohon Sharif"}
+        {
+            src: thumbail5,
+            head1: ["Mix - Mombati|Mohon Sharif", "Dose|Mahib Ahsan ft Anika"],
+            head2: { h1: "Mohon Sharif" }
         }
     ];
     const data93 = [
-        { src:thumbail6,
-          src1:p5,
-          head1:["","|48 VISA-FREE"],
-          head2:{h1:"Nadir On The Go",h2:"1.7Mviews - 1 years ago",src2:tick}
+        {
+            src: thumbail6,
+            src1: p5,
+            head1: ["", "|48 VISA-FREE"],
+            head2: { h1: "Nadir On The Go", h2: "1.7Mviews - 1 years ago", src2: tick }
         }
     ];
     const data92 = [
-        { src:thumbail7,
-          src1:p6,
-          head1:["14 Advanced Tips to Design","Faster in Figma"],
-          head2:{h1:"Mizko",h2:"1.5Mviews -1 years ago",src2:tick}
+        {
+            src: thumbail7,
+            src1: p6,
+            head1: ["14 Advanced Tips to Design", "Faster in Figma"],
+            head2: { h1: "Mizko", h2: "1.5Mviews -1 years ago", src2: tick }
         }
     ];
     const data91 = [
-        { src:thumbail12,
-          src1:p1,
-          head1:["Bulbuli|Coke StudioBangla|","Season One|Ritu Raj X Nandita"],
-          head2:{h1:"Coke Studio Bangla",h2:"1.5Mviews - 2 days ago",src2:tick}
+        {
+            src: thumbail12,
+            src1: p1,
+            head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
+            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: tick }
         }
     ];
     const data90 = [
-        { src:thumbail1,
-          src1:p1,
-          head1:["Bulbuli|Coke StudioBangla|","Season One|Ritu Raj X Nandita"],
-          head2:{h1:"Coke Studio Bangla",h2:"1.5Mviews - 2 days ago",src2:tick}
+        {
+            src: thumbail1,
+            src1: p1,
+            head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
+            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: tick }
         }
     ];
     const data89 = [
-        { src:thumbail2,
-          src1:p1,
-          head1:["Bulbuli|Coke StudioBangla|","Season One|Ritu Raj X Nandita"],
-          head2:{h1:"Coke Studio Bangla",h2:"1.5Mviews - 2 days ago",src2:tick}
+        {
+            src: thumbail2,
+            src1: p1,
+            head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
+            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: tick }
         }
     ];
     const data88 = [
-        { src:thumbail3,
-          src1:p1,
-          head1:["Bulbuli|Coke StudioBangla|","Season One|Ritu Raj X Nandita"],
-          head2:{h1:"Coke Studio Bangla",h2:"1.5Mviews - 2 days ago",src2:tick}
+        {
+            src: thumbail3,
+            src1: p1,
+            head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
+            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: tick }
         }
     ];
 
     return (
         <>
-             <div className='mainbody'>
+            <div className='mainbody'>
                 <div className='main1'>
-                    {data99.map((detail)=>
+                    {data99.map((detail) =>
                     (
                         <div className='thumbnails'>
                             <div><img src={detail.src} alt="" /></div>
@@ -133,10 +145,10 @@ function Mainmenu() {
 
                             </div>
 
-                            </div>
+                        </div>
                     )
                     )}
-                    {data98.map((detail)=>
+                    {data98.map((detail) =>
                     (
                         <div className='thumbanails'>
                             <div><img src={detail.src} alt="" /></div>
@@ -161,10 +173,10 @@ function Mainmenu() {
 
                             </div>
 
-                            </div>
+                        </div>
                     )
                     )}
-                    {data97.map((detail)=>
+                    {data97.map((detail) =>
                     (
                         <div className='thumbanails'>
                             <div><img src={detail.src} alt="" /></div>
@@ -189,10 +201,10 @@ function Mainmenu() {
 
                             </div>
 
-                            </div>
+                        </div>
                     )
                     )}
-                    {data96.map((detail)=>
+                    {data96.map((detail) =>
                     (
                         <div className='thumbanails'>
                             <div><img src={detail.src} alt="" /></div>
@@ -217,10 +229,10 @@ function Mainmenu() {
 
                             </div>
 
-                            </div>
+                        </div>
                     )
                     )}
-                    {data95.map((detail)=>
+                    {data95.map((detail) =>
                     (
                         <div className='thumbanails'>
                             <div><img src={detail.src} alt="" /></div>
@@ -245,10 +257,10 @@ function Mainmenu() {
 
                             </div>
 
-                            </div>
+                        </div>
                     )
                     )}
-                    {data94.map((detail)=>
+                    {data94.map((detail) =>
                     (
                         <div className='thumbanails'>
                             <div><img src={detail.src} alt="" /></div>
@@ -273,10 +285,10 @@ function Mainmenu() {
 
                             </div>
 
-                            </div>
+                        </div>
                     )
                     )}
-                    {data93.map((detail)=>
+                    {data93.map((detail) =>
                     (
                         <div className='thumbanails'>
                             <div><img src={detail.src} alt="" /></div>
@@ -301,10 +313,10 @@ function Mainmenu() {
 
                             </div>
 
-                            </div>
+                        </div>
                     )
                     )}
-                    {data92.map((detail)=>
+                    {data92.map((detail) =>
                     (
                         <div className='thumbanails'>
                             <div><img src={detail.src} alt="" /></div>
@@ -329,10 +341,10 @@ function Mainmenu() {
 
                             </div>
 
-                            </div>
+                        </div>
                     )
                     )}
-                    {data91.map((detail)=>
+                    {data91.map((detail) =>
                     (
                         <div className='thumbanails'>
                             <div><img src={detail.src} alt="" /></div>
@@ -357,10 +369,10 @@ function Mainmenu() {
 
                             </div>
 
-                            </div>
+                        </div>
                     )
                     )}
-                    {data90.map((detail)=>
+                    {data90.map((detail) =>
                     (
                         <div className='thumbanails'>
                             <div><img src={detail.src} alt="" /></div>
@@ -385,10 +397,10 @@ function Mainmenu() {
 
                             </div>
 
-                            </div>
+                        </div>
                     )
                     )}
-                    {data89.map((detail)=>
+                    {data89.map((detail) =>
                     (
                         <div className='thumbanails'>
                             <div><img src={detail.src} alt="" /></div>
@@ -413,10 +425,10 @@ function Mainmenu() {
 
                             </div>
 
-                            </div>
+                        </div>
                     )
                     )}
-                    {data88.map((detail)=>
+                    {data88.map((detail) =>
                     (
                         <div className='thumbanails'>
                             <div><img src={detail.src} alt="" /></div>
@@ -441,7 +453,7 @@ function Mainmenu() {
 
                             </div>
 
-                            </div>
+                        </div>
                     )
                     )}
                 </div>
