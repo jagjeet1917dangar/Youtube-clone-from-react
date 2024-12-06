@@ -12,7 +12,21 @@ function Navbar(){
         { src: create},
         { src: more},
         { src: bell},
-    ]
+    ];
+    const data19 = [
+        { text: "All" },
+        { text: "Cook Studio"},
+        { text: "UX"},
+        { text: "Case Study"},
+        { text: "Music"},
+        { text: "Bangla Lofi"},
+        { text: "Tour"},
+        { text: "Saintmartin"},
+        { text: "Tech"},
+        { text: "iphone 13"},
+        { text: "User Interface Design"},
+        { text: "Computer"}
+    ];
     return(
         <>
         <div className="navbar">
@@ -29,18 +43,10 @@ function Navbar(){
             </div>
             <div className="ellipse"><img src={account} alt="" className="ellipse" /></div>
             <div className="belowsearchbar">
-                <h5 className="map" id='map'>All</h5>
-                <h5 className="map" id='left'>Cook Studio</h5>
-                <h5 className="map" id='left'>UX</h5>
-                <h5 className="map" id='left'>Case Study</h5>
-                <h5 className="map" id='left'>Music</h5>
-                <h5 className="map" id='left'>Bangla Lofi</h5>
-                <h5 className="map" id='left'>Tour</h5>
-                <h5 className="map" id='left'>Saintmartin</h5>
-                <h5 className="map" id='left'>Tech</h5>
-                <h5 className="map" id='left'>iphone 13</h5>
-                <h5 className="map" id='left1' >User Interface Design</h5>
-                <h5 className="map" id='left2'>Computer</h5>
+                {data19.map((detail) => (
+                            <div className='map'>{detail.text}</div>
+                        )
+                        )}
             </div>
             <div className="bor1"></div>
             <div className="bor2"></div>
