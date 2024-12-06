@@ -7,8 +7,8 @@ import Sidebar from './components/Sidebar.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Mainmenu/>
     <Navbar/>
     <Sidebar/>
+    <Mainmenu/>
   </StrictMode>,
 )
