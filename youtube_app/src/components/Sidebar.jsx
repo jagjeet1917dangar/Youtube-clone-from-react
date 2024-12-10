@@ -21,8 +21,8 @@ import Ellipse7 from '../assets/Ellipse7.png'
 
 function Sidebar() {
     const data = [
-        { src: hambarger },
-        { src: youtubelogo }
+        { src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/hambarger.png?raw=true" },
+        { src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Youtube%20logo.png?raw=true" }
     ];
     const data2 = [
         { src: home },

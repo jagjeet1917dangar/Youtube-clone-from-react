@@ -1,17 +1,44 @@
 import './Navbar.css'
 import search from '../assets/search.png'
 import mic from '../assets/mic.png'
-import create from '../assets/create.png'
-import more from '../assets/more.png'
-import bell from '../assets/bell.png'
 import account from '../assets/Ellipse14.png'
 import arrow from '../assets/leftarrow.png'
+import React,{useState,useEffect} from 'react'
 
 function Navbar(){
+
+    const [ video , setVideo ] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:3000/data100')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data); 
+        setVideo(data);
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+    
+      },[]);
+
+      useEffect(() => {
+        fetch('http://localhost:3000/data19')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data); 
+        setVideo(data);
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+    
+      },[]);
+
     const data100 = [
-        { src: create},
-        { src: more},
-        { src: bell},
+        { src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/create.png?raw=true"},
+        { src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/more.png?raw=true"},
+        { src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/bell.png?raw=true"},
     ];
     const data19 = [
         { text: "All" },

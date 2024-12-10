@@ -1,104 +1,101 @@
 import './Mainmenu.css'
-import thumbail1 from '../assets/Thumbnail1.png'
-import thumbail2 from '../assets/Thumbnail2.png'
-import thumbail3 from '../assets/Thumbnail3.png'
-import thumbail4 from '../assets/Thumbnail4.png'
-import thumbail5 from '../assets/Thumbnail5.png'
-import thumbail6 from '../assets/Thumbnail6.png'
-import thumbail7 from '../assets/Thumbnail7.png'
-import thumbail8 from '../assets/Thumbnail8.png'
-import thumbail9 from '../assets/Thumbnail9.png'
-import thumbail10 from '../assets/Thumbnail10.png'
-import thumbail11 from '../assets/Thumbnail11.png'
-import thumbail12 from '../assets/Thumbnail12.png'
-import p1 from '../assets/Ellipse8.png'
-import tick from '../assets/verified.png'
-import p2 from '../assets/Ellipse9.png'
-import p3 from '../assets/Ellipse10.png'
-import p4 from '../assets/Ellipse11.png'
-import p5 from '../assets/Ellipse12.png'
-import p6 from '../assets/Ellipse13.png'
-import p7 from '../assets/Ellipse14.png'
+import React,{useEffect,useState} from 'react';
 
-function Mainmenu() {
+
+function Mainmenu(){
+
+    const [ video , setVideo ] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:3000/data')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data); 
+        setVideo(data);
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+    
+      },[]);
 
     const data = [
         {
-            src: thumbail8,
-            src1: p1,
+            src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-8.png?raw=true",
+            src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%201%20(1).png?raw=true",
             head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
-            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: tick }
+            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
         },
         {
-            src: thumbail9,
-            src1: p2,
+            src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-9.png?raw=true",
+            src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(2).png?raw=true",
             head1: ["Infinix Note 12:", "AMOLED Helio G88 SoC!"],
-            head2: { h1: "ATC Android ToTo Company", h2: "42M views - 2 days ago", src2: tick }
+            head2: { h1: "ATC Android ToTo Company", h2: "42M views - 2 days ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
         },
         {
-            src: thumbail10,
-            src1: p3,
+            src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-10.png?raw=true",
+            src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(4).png?raw=true",
             head1: ["My first UX Design case study -", "This got me my first job."],
-            head2: { h1: "Saptarshi Prakash", h2: "48K views - 1 years ago", src2: tick }
+            head2: { h1: "Saptarshi Prakash", h2: "48K views - 1 years ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
         },
         {
-            src: thumbail11,
+            src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-11.png?raw=true",
             head1: ["My Mix", ""],
             head2: { h1: "Lopamudra Mitra,Anupam Roy, and more" }
         },
         {
-            src: thumbail4,
-            src1: p4,
+            src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-4.png?raw=true",
+            src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(4).png?raw=true",
             head1: ["UX Drsign-What is it?(From AJ", "&Smart)"],
-            head2: { h1: "AJ&Smar", h2: "150KM views - 3 years ago", src2: tick }
+            head2: { h1: "AJ&Smar", h2: "150KM views - 3 years ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
         },
         {
-            src: thumbail5,
+            src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-5.png?raw=true",
             head1: ["Mix - Mombati|Mohon Sharif", "Dose|Mahib Ahsan ft Anika"],
             head2: { h1: "Mohon Sharif" }
         },
         {
-            src: thumbail6,
-            src1: p5,
+            src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-6.png?raw=true",
+            src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(6).png?raw=true",
             head1: ["", "|48 VISA-FREE"],
-            head2: { h1: "Nadir On The Go", h2: "1.7Mviews - 1 years ago", src2: tick }
+            head2: { h1: "Nadir On The Go", h2: "1.7Mviews - 1 years ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
         },
         {
-            src: thumbail7,
-            src1: p6,
+            src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-7.png?raw=true",
+            src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(5).png?raw=true",
             head1: ["14 Advanced Tips to Design", "Faster in Figma"],
-            head2: { h1: "Mizko", h2: "1.5Mviews -1 years ago", src2: tick }
+            head2: { h1: "Mizko", h2: "1.5Mviews -1 years ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
         },
         {
-            src: thumbail12,
-            src1: p1,
+            src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail.png?raw=true",
+            src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(2).png?raw=true",
             head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
-            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: tick }
+            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
         },
         {
-            src: thumbail1,
-            src1: p1,
+            src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-1.png?raw=true",
+            src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(5).png?raw=true",
             head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
-            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: tick }
+            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
         },
         {
-            src: thumbail2,
-            src1: p1,
+            src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-2.png?raw=true",
+            src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(1).png?raw=true",
             head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
-            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: tick }
+            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
         },
         {
-            src: thumbail3,
-            src1: p1,
+            src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-3.png?raw=true",
+            src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%201%20(4).png?raw=true",
             head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
-            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: tick }
+            head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
         }
     ];
     return (
         <>
             <div className='mainbody'>
                 <div className='main1'>
-                    {data.map((detail) =>
+                    {video.map((detail) =>
                     (
                         <div className='thumbnails'>
                             <div><img src={detail.src} alt="" /></div>
