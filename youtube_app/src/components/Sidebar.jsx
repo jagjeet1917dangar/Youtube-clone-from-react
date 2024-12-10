@@ -1,6 +1,4 @@
 import './Sidebar.css'
-import hambarger from '../assets/hambarger.png'
-import youtubelogo from '../assets/Youtubelogo.png'
 import home from '../assets/home.png'
 import explore from '../assets/explore.png'
 import shorts from '../assets/shorts.png'
@@ -20,7 +18,7 @@ import Ellipse7 from '../assets/Ellipse7.png'
 
 
 function Sidebar() {
-    const data = [
+    const data1 = [
         { src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/hambarger.png?raw=true" },
         { src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Youtube%20logo.png?raw=true" }
     ];
@@ -74,7 +72,7 @@ function Sidebar() {
         <>
             <div className="sidebar">
                 <div className="sidebar1">
-                    {data.map((detail) => (
+                    {data1.map((detail) => (
                         <img className='hambarger' src={detail.src} />
                     )
                     )}
