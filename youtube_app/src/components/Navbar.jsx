@@ -11,10 +11,9 @@ function Navbar(){
     const [ video2 , setVideo2 ] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/data100')
+        fetch('https://jagjeet-youtube-api-1.onrender.com/data100')
       .then(response => response.json())
       .then(data100 => {
-        console.log(data100); 
         setVideo1(data100);
       })
       .catch(error => {
@@ -24,10 +23,9 @@ function Navbar(){
       },[]);
 
       useEffect(() => {
-        fetch('http://localhost:3000/data19')
+        fetch('https://jagjeet-youtube-api-1.onrender.com/data19')
       .then(response => response.json())
-      .then(data19 => {
-        console.log(data19); 
+      .then(data19 => { 
         setVideo2(data19);
       })
       .catch(error => {
@@ -59,7 +57,7 @@ function Navbar(){
         <>
         <div className="navbar">
             <div className="allaboutsearch">
-            <div className="searchbar"><p className="bgt">Search</p></div>
+            <div className="searchbar"><input type="text" id='search' name='' /></div>
             <div className="searchicon"><img src={search} alt="" className="search" /></div>
             <div className="mic"><img src={mic} alt="" className="micicon" /></div>
             </div>

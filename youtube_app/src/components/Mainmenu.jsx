@@ -1,140 +1,354 @@
-import './Mainmenu.css'
-import React,{useEffect,useState} from 'react';
+// import './Mainmenu.css'
+// import React,{useEffect,useState} from 'react';
 
 
-function Mainmenu(){
+// function Mainmenu(){
 
-    const [ video , setVideo ] = useState([])
+// const [ video , setVideo ] = useState([])
 
-    useEffect(() => {
-        fetch('http://localhost:3000/data')
-      .then(response => response.json())
-      .then(data => {
-        console.log(data); 
-        setVideo(data);
-      })
-      .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-      });
-    
-      },[]);
+// useEffect(() => {
+//     fetch('https://jagjeet-youtube-api-1.onrender.com/data')
+//   .then(response => response.json())
+//   .then(data => {
+//     setVideo(data);
+//   })
+//   .catch(error => {
+//     console.error('There was a problem with the fetch operation:', error);
+//   });
 
-    // const data = [
-    //     {
-    //         src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-8.png?raw=true",
-    //         src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%201%20(1).png?raw=true",
-    //         head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
-    //         head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
-    //     },
-    //     {
-    //         src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-9.png?raw=true",
-    //         src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(2).png?raw=true",
-    //         head1: ["Infinix Note 12:", "AMOLED Helio G88 SoC!"],
-    //         head2: { h1: "ATC Android ToTo Company", h2: "42M views - 2 days ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
-    //     },
-    //     {
-    //         src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-10.png?raw=true",
-    //         src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(4).png?raw=true",
-    //         head1: ["My first UX Design case study -", "This got me my first job."],
-    //         head2: { h1: "Saptarshi Prakash", h2: "48K views - 1 years ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
-    //     },
-    //     {
-    //         src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-11.png?raw=true",
-    //         head1: ["My Mix", ""],
-    //         head2: { h1: "Lopamudra Mitra,Anupam Roy, and more" }
-    //     },
-    //     {
-    //         src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-4.png?raw=true",
-    //         src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(4).png?raw=true",
-    //         head1: ["UX Drsign-What is it?(From AJ", "&Smart)"],
-    //         head2: { h1: "AJ&Smar", h2: "150KM views - 3 years ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
-    //     },
-    //     {
-    //         src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-5.png?raw=true",
-    //         head1: ["Mix - Mombati|Mohon Sharif", "Dose|Mahib Ahsan ft Anika"],
-    //         head2: { h1: "Mohon Sharif" }
-    //     },
-    //     {
-    //         src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-6.png?raw=true",
-    //         src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(6).png?raw=true",
-    //         head1: ["", "|48 VISA-FREE"],
-    //         head2: { h1: "Nadir On The Go", h2: "1.7Mviews - 1 years ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
-    //     },
-    //     {
-    //         src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-7.png?raw=true",
-    //         src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(5).png?raw=true",
-    //         head1: ["14 Advanced Tips to Design", "Faster in Figma"],
-    //         head2: { h1: "Mizko", h2: "1.5Mviews -1 years ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
-    //     },
-    //     {
-    //         src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail.png?raw=true",
-    //         src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(2).png?raw=true",
-    //         head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
-    //         head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
-    //     },
-    //     {
-    //         src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-1.png?raw=true",
-    //         src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(5).png?raw=true",
-    //         head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
-    //         head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
-    //     },
-    //     {
-    //         src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-2.png?raw=true",
-    //         src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%204%20(1).png?raw=true",
-    //         head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
-    //         head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
-    //     },
-    //     {
-    //         src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Thumbnail-3.png?raw=true",
-    //         src1: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Ellipse%201%20(4).png?raw=true",
-    //         head1: ["Bulbuli|Coke StudioBangla|", "Season One|Ritu Raj X Nandita"],
-    //         head2: { h1: "Coke Studio Bangla", h2: "1.5Mviews - 2 days ago", src2: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/verified.png?raw=true" }
-    //     }
-    // ];
+//   },[]);
+// return (
+//     <>
+//         <div className='mainbody'>
+//             <div className='main1'>
+//                 {video.map((detail) =>
+//                 (
+//                     <div className='thumbnails'>
+//                         <div><img src={detail.src} alt="" /></div>
+//                         <div><img src={detail.src1} alt="" /></div>
+
+//                         <div className='heading1'>
+//                             <div>
+//                                 {detail.head1[0]}
+//                             </div>
+//                             <div>
+//                                 {detail.head1[1]}
+//                             </div>
+//                         </div>
+//                         <div className='heading2'>
+//                             <div className='h2'>
+//                                 {detail.head2.h1}
+//                                 <div className='tick'>
+//                                     <img src={detail.head2.src2} alt="" />
+//                                 </div>
+//                             </div>
+//                             <div className='h2_1'>{detail.head2.h2}</div>
+
+//                         </div>
+
+//                     </div>
+//                 )
+//                 )}
+//             </div>
+//         </div>
+//     </>
+//     )
+// }
+
+// export default Mainmenu
+
+
+
+
+
+
+
+// import './Mainmenu.css';
+// import React, { useEffect, useState } from 'react';
+
+// function Mainmenu() {
+//     const [videos, setVideos] = useState([]);
+//     const [query, setQuery] = useState('');
+
+//     const apiKey = "AIzaSyD4q-1n1rTI5OXmmV0-QFZw4SDG7bmKdBQ";
+
+//     const searchYouTube = (searchQuery) => {
+//         const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=12&q=${searchQuery}&key=${apiKey}`;
+//         fetch(apiUrl)
+//             .then((response) => response.json())
+//             .then((data) => {
+//                 const videoData = data.items.map((item) => ({
+//                     id: item.id.videoId,
+//                     title: item.snippet.title,
+//                     thumbnail: item.snippet.thumbnails.default.url,
+//                     channelTitle: item.snippet.channelTitle,
+//                 }));
+//                 setVideos(videoData);
+//             })
+//             .catch((error) => {
+//                 console.error('Error fetching data:', error);
+//             });
+//     };
+
+//     const handleSearch = (e) => {
+//         e.preventDefault();
+//         if (query.trim() !== '') {
+//             searchYouTube(query);
+//         }
+//     };
+
+//     return (
+//         <>
+//             <div className="mainbody">
+//                 {/* Search Bar */}
+//                 <form onSubmit={handleSearch} className="search-bar">
+//                     <input className='pushpa'
+//                         type="text"
+//                         placeholder="Search"
+//                         value={query}
+//                         onChange={(e) => setQuery(e.target.value)}
+//                     />
+//                     <button className='submit' type="submit"><img src="http://localhost:5173/src/assets/search.png" alt="" /></button>
+//                 </form>
+
+//                 {/* Video Thumbnails */}
+//                 <div className="main1">
+//                     {videos.map((video) => (
+//                         <div key={video.id} className="thumbnails">
+//                             <img src={video.thumbnail} className='size' alt={video.title} />
+//                             <div className="heading1">{video.title}</div>
+//                             <div className="heading2">{video.channelTitle}</div>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </>
+//     );
+// }
+
+// export default Mainmenu;
+
+// import './Mainmenu.css';
+// import React, { useState } from 'react';
+
+// function Mainmenu() {
+//     const [videos, setVideos] = useState([]);
+//     const [query, setQuery] = useState('');
+//     const [selectedVideoId, setSelectedVideoId] = useState(null);
+//     const [selectNumber, setSelectedNumber] = useState(1);
+
+//     const apiKey = "AIzaSyC4Y28COw5PN69-0rPV7t5hWY9KUU1s0Sc";
+
+//     const searchYouTube = (searchQuery) => {
+//         const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=${selectNumber}&q=${searchQuery}&key=${apiKey}`;
+//         fetch(apiUrl)
+//             .then((response) => response.json())
+//             .then((data) => {
+//                 const videoData = data.items.map((item) => ({
+//                     id: item.id.videoId,
+//                     title: item.snippet.title,
+//                     thumbnail: item.snippet.thumbnails.default.url,
+//                     channelTitle: item.snippet.channelTitle,
+//                 }));
+//                 setVideos(videoData);
+//                 setSelectedVideoId(null); // Reset selected video
+//             })
+//             .catch((error) => {
+//                 console.error('Error fetching data:', error);
+//             });
+//     };
+
+//     const handleSearch = (e) => {
+//         e.preventDefault();
+//         if (query.trim() !== '') {
+//             searchYouTube(query);
+//         }
+//     };
+
+
+//     const handleVideoClick = (videoId) => {
+//         setSelectedVideoId(videoId); // Set the clicked video's ID
+//     };
+
+//     const handleInputChange = (event) => {
+//         const value = event.target.value; 
+//         setSelectedNumber(Number(value)); 
+//     };
+
+//     return (
+//         <>
+//             <div>
+//                 <input className='state'
+//                     type="number"
+//                     value={selectNumber}
+//                     onChange={handleInputChange}
+//                     placeholder="Enter a number"
+//                 />
+//             </div>
+//             <div className="mainbody">
+//                 {/* Search Bar */}
+//                 <form onSubmit={handleSearch} className="search-bar">
+//                     <input
+//                         className="pushpa"
+//                         type="text"
+//                         placeholder="Search"
+//                         value={query}
+//                         onChange={(e) => setQuery(e.target.value)}
+//                     />
+//                     <button className="submit" type="submit">
+//                         <img src="http://localhost:5173/src/assets/search.png" alt="" />
+//                     </button>
+//                 </form>
+
+//                 {/* Video Player */}
+//                 {selectedVideoId && (
+//                     <div className="video-player">
+//                         <iframe
+//                             title="YouTube Video Player"
+//                             width="600"
+//                             height="315"
+//                             src={`https://www.youtube.com/embed/${selectedVideoId}?autoplay=1`}
+//                             frameBorder="0"
+//                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//                             allowFullScreen
+//                         ></iframe>
+//                     </div>
+//                 )}
+
+//                 {/* Video Thumbnails */}
+//                 <div className="main1">
+//                     {videos.map((video) => (
+//                         <div
+//                             key={video.id}
+//                             className="thumbnails"
+//                             onClick={() => handleVideoClick(video.id)} // Handle click
+//                         >
+//                             <img
+//                                 src={video.thumbnail}
+//                                 className="size"
+//                                 alt={video.title}
+//                             />
+//                             <div className="heading1">{video.title}</div>
+//                             <div className="heading2">{video.channelTitle}</div>
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </>
+//     );
+// }
+
+// export default Mainmenu;
+
+import './Mainmenu.css';
+import React, { useState } from 'react';
+
+function Mainmenu() {
+    const [videos, setVideos] = useState([]);
+    const [query, setQuery] = useState('');
+    const [selectedVideoId, setSelectedVideoId] = useState(null);
+    const [selectNumber, setSelectedNumber] = useState(12);
+
+    const apiKey = "AIzaSyC4Y28COw5PN69-0rPV7t5hWY9KUU1s0Sc";
+
+    const searchYouTube = (searchQuery) => {
+        const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=${selectNumber}&q=${searchQuery}&key=${apiKey}`;
+        fetch(apiUrl)
+            .then((response) => response.json())
+            .then((data) => {
+                const videoData = data.items.map((item) => ({
+                    id: item.id.videoId,
+                    title: item.snippet.title,
+                    thumbnail: item.snippet.thumbnails.high
+                        ? item.snippet.thumbnails.high.url
+                        : item.snippet.thumbnails.medium.url,
+                    channelThumb: item.snippet.cahnnelThumb,
+                    channelTitle: item.snippet.channelTitle,
+                }));
+                setVideos(videoData);
+                setSelectedVideoId(null);
+            })
+            .catch((error) => {
+                console.error('Error fetching data:', error);
+            });
+    };
+
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (query.trim() !== '') {
+            searchYouTube(query);
+        }
+    };
+
+    const handleVideoClick = (videoId) => {
+        setSelectedVideoId(videoId);
+    };
+
+    const handleInputChange = (event) => {
+        const value = event.target.value;
+        setSelectedNumber(Number(value));
+    };
+
     return (
         <>
-            <div className='mainbody'>
-                <div className='main1'>
-                    {video.map((detail) =>
-                    (
-                        <div className='thumbnails'>
-                            <div><img src={detail.src} alt="" /></div>
-                            <div><img src={detail.src1} alt="" /></div>
-
-                            <div className='heading1'>
-                                <div>
-                                    {detail.head1[0]}
-                                </div>
-                                <div>
-                                    {detail.head1[1]}
-                                </div>
-                            </div>
-                            <div className='heading2'>
-                                <div className='h2'>
-                                    {detail.head2.h1}
-                                    <div className='tick'>
-                                        <img src={detail.head2.src2} alt="" />
-                                    </div>
-                                </div>
-                                <div className='h2_1'>{detail.head2.h2}</div>
-
-                            </div>
-
+            <div className="state">
+                <input className='state2'
+                    type="number"
+                    value={selectNumber}
+                    onChange={handleInputChange}
+                    placeholder="Enter a number"
+                />
+            </div>
+            <div className="mainbody">
+                <form onSubmit={handleSearch} className="search-bar">
+                    <input
+                        className="pushpa"
+                        type="text"
+                        placeholder="Search"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                    />
+                    <button className="submit" type="submit">
+                        <img src="http://localhost:5173/src/assets/search.png" alt="" />
+                    </button>
+                </form>
+                {selectedVideoId && (
+                    <div className="video-player">
+                        <iframe
+                            title="YouTube Video Player"
+                            width="1000"
+                            height="415"
+                            src={`https://www.youtube.com/embed/${selectedVideoId}?autoplay=1`}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
+                    </div>
+                )}
+                <div className="main1">
+                    {videos.map((video) => (
+                        <div
+                            key={video.id}
+                            className="thumbnails"
+                            onClick={() => handleVideoClick(video.id)}
+                        >
+                            <img
+                                src={video.thumbnail}
+                                className="size"
+                                alt={video.title}
+                            />
+                            <div className="heading1">{video.title}</div>
+                            <div className="heading2">{video.channelTitle}</div>
                         </div>
-                    )
-                    )}
+                    ))}
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default Mainmenu
-
-
-
-
-
+export default Mainmenu;
 
 
 
