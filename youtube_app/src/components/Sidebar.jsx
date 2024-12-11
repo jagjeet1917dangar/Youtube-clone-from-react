@@ -15,9 +15,11 @@ import Ellipse3 from '../assets/Ellipse3.png'
 import Ellipse4 from '../assets/Ellipse4.png'
 import Ellipse5 from '../assets/Ellipse5.png'
 import Ellipse7 from '../assets/Ellipse7.png'
+import { useState } from 'react'
 
 
 function Sidebar() {
+
     const data1 = [
         { src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/hambarger.png?raw=true" },
         { src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/Youtube%20logo.png?raw=true" }
@@ -66,6 +68,7 @@ function Sidebar() {
         { text: "ATC Android ToTo C..." },
         { text: "Alux.com" }
     ];
+
 
 
     return (

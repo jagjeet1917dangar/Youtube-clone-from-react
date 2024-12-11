@@ -9,6 +9,8 @@ function Navbar(){
 
     const [ video1 , setVideo1 ] = useState([])
     const [ video2 , setVideo2 ] = useState([])
+    const [ m_data , setData ] = useState('');
+
 
     useEffect(() => {
         fetch('https://jagjeet-youtube-api-1.onrender.com/data100')
@@ -27,12 +29,15 @@ function Navbar(){
       .then(response => response.json())
       .then(data19 => { 
         setVideo2(data19);
+        setData(data19.value)
       })
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
       });
     
       },[]);
+
+
 
     // const data100 = [
     //     { src: "https://github.com/PatelNeelMahesh/frontend_tasks/blob/main/02.youtube-clone/assets/create.png?raw=true"},
